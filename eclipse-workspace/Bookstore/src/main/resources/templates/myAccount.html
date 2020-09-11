@@ -1,12 +1,13 @@
+
 <!DOCTYPE html>
 <html lang="en" xmlns:th="http://www.w3.org/1000/xhtml">
 <head th:replace="common/header :: common-header" />
 
 <body>
-	<div th:replace="common/header :: navbar" /></div>
+	<div th:replace="common/header :: navbar" />
 
 	<div class="container">
-		<div class="row" style="margin-bottom: -40px;">
+		<div class="row" style="margin-bottom: -100px;">
 			<div class="col-xs-8">
 				<h2 class="section-headline">
 					<span>User Account</span>
@@ -58,7 +59,7 @@
 												already exists. Choose a different one.</span> <input
 												required="required" type="text" class="form-control"
 												id="newUsername" name="username" />
-											<p style="color: #828282">Enter your username.</p>
+											<p style="color: #828282">Enter your username here.</p>
 										</div>
 
 										<div class="form-group">
@@ -68,7 +69,7 @@
 												required="required" type="text" class="form-control"
 												id="email" name="email" />
 											<p style="color: #828282">A valid email address. All
-												emails from the system will be sent to this address. The
+												emails from the system withll be sent to this address. The
 												email address is not made public and will only be used if
 												you wish to receive a new password or wish to receive
 												certain notification.</p>
@@ -95,7 +96,7 @@
 											<label for="username">* Username: </label> <input
 												required="required" type="text" class="form-control"
 												id="username" name="username" />
-											<p style="color: #828282">Enter your username.</p>
+											<p style="color: #828282">Enter your username here.</p>
 										</div>
 
 										<div class="form-group">
@@ -128,7 +129,7 @@
 												required="required" type="text" class="form-control"
 												id="recoverEmail" name="email" />
 											<p style="color: #828282">Enter your registered email
-												address.</p>
+												address here.</p>
 										</div>
 
 										<button type="submit" class="btn btn-primary">Submit</button>
@@ -142,8 +143,8 @@
 		</div>
 	</div>
 	<!-- end of container -->
-<div th:replace="common/header :: footer"/></div>
+<div th:replace="common/header :: footer"/>
 
-	<div th:replace="common/header :: body-bottom-scripts" /></div>
+	<div th:replace="common/header :: body-bottom-scripts" />
 </body>
 </html>

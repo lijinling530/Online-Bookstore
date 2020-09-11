@@ -17,7 +17,7 @@ import com.bookstore.utility.SecurityUtility;
 @Configuration
 @EnableWebSecurity
 @EnableGlobalMethodSecurity(prePostEnabled=true)
-public class SecurityConfig extends WebSecurityConfigurerAdapter{
+public class SecurityConfig extends WebSecurityConfigurerAdapter {
 	@Autowired
 	private Environment env;
 
@@ -27,6 +27,7 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter{
 	private BCryptPasswordEncoder passwordEncoder() {
 		return SecurityUtility.passwordEncoder();
 	}
+
 	private static final String[] PUBLIC_MATCHERS = {
 			"/css/**",
 			"/js/**",
@@ -35,8 +36,16 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter{
 			"/newUser",
 			"/forgetPassword",
 			"/login",
-			"/fonts/**"
+			"/fonts/**",
+			"/bookshelf",
+			"/bookDetail/**",
+			"/hours",
+			"/faq",
+			"/searchByCategory",
+			"/searchBook"
+			
 	};
+
 	@Override
 	protected void configure(HttpSecurity http) throws Exception {
 		http
@@ -56,11 +65,10 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter{
 			.and()
 			.rememberMe();
 	}
-	
+
 	@Autowired
 	public void configureGlobal(AuthenticationManagerBuilder auth) throws Exception {
 		auth.userDetailsService(userSecurityService).passwordEncoder(passwordEncoder());
 	}
-
 
 }

@@ -93,5 +93,6 @@ public class PasswordResetToken {
 		return "PasswordResetToken [id=" + id + ", token=" + token + ", user=" + user + ", expiryDate=" + expiryDate
 				+ "]";
 	}
+	
+	
 }
-
